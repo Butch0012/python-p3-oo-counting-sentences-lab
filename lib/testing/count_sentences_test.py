@@ -5,13 +5,16 @@ from count_sentences import MyString
 import io
 import sys
 
-class TestMyString:
-    '''MyString in count_sentences.py'''
+# Assuming your test file is count_sentences_test.py
 
+from count_sentences import MyString 
+
+class TestMyString:
     def test_is_class(self):
         '''is a class with the name "MyString".'''
-        string = MyString()
-        assert(type(string) == MyString)
+        string = MyString("Your string value here")  
+        assert isinstance(string, MyString)
+
 
     def test_value_string(self):
         '''prints "The value must be a string." if not string.'''
